@@ -1,0 +1,61 @@
+@font-face {
+  font-display: swap;
+  font-family: "Tangak";
+  font-weight: 700;
+  font-style: normal;
+  src: url("fonts/tangak.woff2") format("woff2");
+}
+
+body {
+  font-family: "Tangak";
+  color: #425d7a;
+}
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+h1 {
+  font-size: 65px;
+}
+h1 span {
+  color: #33bf52;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  font-family: "Tangak";
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #425d7a;
+}
+
+h2 {
+    color: #33bf52;
+  font-size: 32px;
+}
+
+h2 span{
+    color: #425d7a;
+}
+.hint span{
+  font-size: 52px;
+  color: #d80a61;
+}
+
+.wordList li{
+    font-size: 32px;
+    color: #1c374c;
+}
