@@ -1,8 +1,11 @@
 const input = document.querySelector(".input");
 const hint = document.querySelector(".hint");
 const wordList = document.querySelector(".wordList");
+const newGame = document.querySelector(".newGame");
 
-const words = [];
+const words = JSON.parse(localStorage.getItem("list")) || [];
+
+// localStorage.setItem('list', JSON.stringify(words))
 
 // запасная функция
 
@@ -18,6 +21,8 @@ const renderWords2 = () => {
     wordList.insertAdjacentHTML("beforeend", li);
   }
 };
+
+renderWords2();
 
 function getLastLetter() {
   const lastWord = words[words.length - 1];
@@ -58,6 +63,15 @@ input.addEventListener("keydown", function (event) {
   if (event.keyCode === 13) {
     checkWord();
     input.value = "";
+    localStorage.setItem("list", JSON.stringify(words));
+
     renderWords2();
   }
+});
+
+newGame.addEventListener("click", function () {
+  words.length = 0
+  wordList.textContent = ''
+  localStorage.setItem('list', JSON.stringify(words))
+  hint.innerHTML = ''
 });
